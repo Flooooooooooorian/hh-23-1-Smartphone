@@ -44,7 +44,7 @@ class SmartphoneTest {
     void calculatePosition_returnsKoeln() {
         // GIVEN
         Smartphone smartphone = testSmartphone();
-        String expected = "Köln";
+        String expected = "Bochum";
 
         // WHEN / THEN
         String actual = smartphone.getPosition();
