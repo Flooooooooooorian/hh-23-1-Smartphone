@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SmartphoneTest {
 
-    private Smartphone generateDummySmartphone() {
+    private Smartphone testSmartphone() {
         List<Contact> contacts = List.of(
                 new Friend("Max", "0176 12345678"),
                 new Friend("Döner", "0176 12345678")
@@ -18,14 +18,14 @@ class SmartphoneTest {
 
     @Test
     void testThatSmartphoneCanBeCreated() {
-        Smartphone smartphone =  generateDummySmartphone();
+        Smartphone smartphone =  testSmartphone();
         assertNotNull(smartphone);
     }
 
     @Test
     void stopRadio_returnsFalse() {
         // GIVEN
-        Smartphone smartphone = generateDummySmartphone();
+        Smartphone smartphone = testSmartphone();
 
         // WHEN / THEN
         assertFalse(smartphone.stopRadio());
@@ -34,7 +34,7 @@ class SmartphoneTest {
     @Test
     void startRadio_returnsTrue() {
         // GIVEN
-        Smartphone smartphone = generateDummySmartphone();
+        Smartphone smartphone = testSmartphone();
 
         // WHEN / THEN
         assertTrue(smartphone.startRadio());
@@ -43,7 +43,7 @@ class SmartphoneTest {
     @Test
     void calculatePosition_returnsKoeln() {
         // GIVEN
-        Smartphone smartphone = generateDummySmartphone();
+        Smartphone smartphone = testSmartphone();
         String expected = "Köln";
 
         // WHEN / THEN
