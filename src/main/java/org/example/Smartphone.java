@@ -85,10 +85,6 @@ public class Smartphone implements GPS,Radio{
         }
     }
 
-    public boolean containsAtLeast3Contacts() {
-        return contacts.size() >= 3;
-    }
-
     @Override
     public String toString() {
         return "Smartphone{" +
